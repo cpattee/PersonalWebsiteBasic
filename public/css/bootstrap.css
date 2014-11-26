@@ -945,7 +945,7 @@ img {
 .img-thumbnail {
   display: inline-block;
   width: 100% \9;
-  max-width: 100%;
+  max-width: 33%;
   height: auto;
   padding: 4px;
   line-height: 1.42857143;
@@ -1103,10 +1103,10 @@ p {
   margin: 0 0 10px;
 }
 .lead {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
   font-size: 16px;
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1;
 }
 @media (min-width: 768px) {
   .lead {
@@ -1215,13 +1215,14 @@ a.bg-danger:hover {
 }
 .page-header {
   padding-bottom: 9px;
-  margin: 40px 0 20px;
+  /*margin: 40px 0 20px;*/
   border-bottom: 1px solid #eee;
 }
 ul,
 ol {
-  margin-top: 0;
-  margin-bottom: 10px;
+	margin: 10px 10px 10px 10px;
+  /*margin-top: 0;
+  margin-bottom: 10px;*/
 }
 ul ul,
 ol ul,
@@ -1408,7 +1409,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    max-width: 1170px;
   }
 }
 .container-fluid {
@@ -3768,8 +3769,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 50px;
-  margin-bottom: 20px;
+	z-index: 1000;
+  min-height: 30px;
+  margin-bottom: 0px;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -3878,11 +3880,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-width: 1px 0 0;
 }
 .navbar-brand {
-  float: left;
+/*float: left;
   height: 50px;
-  padding: 15px 15px;
+  padding: 30px 20px 10px;
   font-size: 5em;
-  line-height: 20px;
+	font-weight: 700;
+  line-height: 25px;*/
+	height: 50px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -5022,8 +5026,9 @@ a.list-group-item-danger.active:focus {
   color: inherit;
 }
 .panel-footer {
+	margin-top: -10%;
   padding: 10px 15px;
-  background-color: #f5f5f5;
+  background-color: RGBA(246, 246, 246, 0.65);
   border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -5326,8 +5331,8 @@ a.list-group-item-danger.active:focus {
   padding-bottom: 75%;
 }
 .well {
-  min-height: 20px;
-  padding: 19px;
+  min-height: 10px;
+  padding: 10px;
   margin-bottom: 20px;
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
@@ -5714,6 +5719,8 @@ button.close {
 }
 .carousel {
   position: relative;
+	margin-top: -30px;
+	border-radius: 4px;
 }
 .carousel-inner {
   position: relative;
@@ -5863,15 +5870,17 @@ button.close {
 }
 .carousel-caption {
   position: absolute;
-  right: 15%;
-  bottom: 20px;
-  left: 15%;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
+	border-radius: 4px;
+  padding: 15px;
   color: #fff;
-  text-align: center;
+  text-align: left;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+	background: #333333;
+	line-height: 1;
 }
 .carousel-caption .btn {
   text-shadow: none;
@@ -5895,9 +5904,9 @@ button.close {
     margin-right: -15px;
   }
   .carousel-caption {
-    right: 20%;
+   /* right: 20%;
     left: 20%;
-    padding-bottom: 30px;
+    padding-bottom: 30px;*/
   }
   .carousel-indicators {
     bottom: 20px;

@@ -4,7 +4,7 @@ a {
 }
 
 body {
-  padding: 50px;
+  padding: 10px 50px 50px 50px;
 	color: #ef6349;
   /*color: #5a5a5a;*/
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -98,10 +98,10 @@ body {
     .navbar-brand {
 			display:block;
 			float: left;
-      padding: 16px 20px 16px; /* Increase vertical padding to match navbar links */
+      /*padding: 16px 20px 16px; /* Increase vertical padding to match navbar links */
 			font-size: 5em;
       font-family:'gear_proportionregular';
-      font-weight: 300;
+      font-weight: 700;
       letter-spacing: 5px;
       margin: 0;
       margin-bottom: 0px;
@@ -109,7 +109,9 @@ body {
 			color: #fff;
      /* font-size: 16px;
       font-weight: bold;*/
-      text-shadow: 0 -1px 0 rgba(0,0,0,.5);  
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+			height: 50px;
+			padding: 15px 20px 10px;
     }
 		
     /* Special class on .container surrounding .navbar, used for positioning it into place. */
@@ -118,7 +120,7 @@ body {
       top: 0;
       left: 0;
       right: 0;
-      z-index: 10;
+      z-index: 100;
       margin-top: 20px;
       margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
     }
@@ -167,13 +169,13 @@ body {
     -------------------------------------------------- */
 
     /* Center align the text within the three columns below the carousel */
-    .marketing .span4 {
-      text-align: center;
+    .marketing  {
+      /*text-align: center;*/
     }
     .marketing h2 {
       font-weight: normal;
     }
-    .marketing .span4 p {
+    .marketing p {
       margin-left: 10px;
       margin-right: 10px;
     }
@@ -279,7 +281,7 @@ body {
 
       }
       .carousel .item {
-        height: 300px;
+        /*height: 300px;*/
       }
       .carousel img {
         height: 300px;
@@ -311,3 +313,4 @@ body {
       }
 
     }
+		
