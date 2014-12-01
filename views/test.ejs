@@ -1,32 +1,35 @@
 <% include header %>
-  <link rel="stylesheet" href="/css/circles.css">
-<div class="container">
-	<div class="row">
-		<h2>Any image, size doesn«t matter, centered and respecting ratio</h2>
+<div class="container-fluid">
+<button class="filter" data-filter="all">All</button>
+<button class="filter" data-filter=".category-1">Design</button>
+<button class="filter" data-filter=".category-2">Traditional</button>
+<button class="filter" data-filter=".category-3">Data Viz</button>
+<button class="filter" data-filter=".category-4">UX/UI</button>
+
+<!--button class="sort" data-sort="my-order:asc">Ascending Order</button>
+<button class="sort" data-sort="my-order:desc">Descending Order</button-->
+
+<div id="container">
+	<div class="mix category-1 col-xs-3" data-my-order="1">
+		<img class="img-responsive" src="/img/icons/dataviz/1.png">
 	</div>
-    <div class="row">
-        <div class="col-sm-2">
-            <p> Image in to circle</</p>
-            <div  class="ratio img-responsive img-circle" style="background-image: url(https://camo.githubusercontent.com/47dcfb965976b72705949abac49512c08f98b60e/687474703a2f2f696d672e736b697463682e636f6d2f32303132303730322d6b36636370376b6b6a6a686163663371693279357972683768712e676966);"></div>
-        </div>
-        <div class="col-sm-10">
-            <p> Real image</p>
-            <img src="https://camo.githubusercontent.com/47dcfb965976b72705949abac49512c08f98b60e/687474703a2f2f696d672e736b697463682e636f6d2f32303132303730322d6b36636370376b6b6a6a686163663371693279357972683768712e676966">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-4">
-            <p> Image in to circle</</p>
-            <div  class="ratio img-responsive img-circle" style="background-image: url(../img/cat_icons/Programs.png);"></div>
-        </div>
-        <div class="col-xs-2">
-            <p> Real image</p>
-            <img src="img/cat_icons/DataViz.png">
-        </div>
-    </div>
+	<div class="mix category-1 col-xs-3" data-my-order="2">
+		<img class="img-responsive" src="/img/icons/dataviz/1.png">
+	</div>
+	<div class="mix category-1 col-xs-3" data-my-order="3">
+		<img class="img-responsive" src="/img/icons/dataviz/1.png">
+	</div>
+	<div class="mix category-3 col-xs-3" data-my-order="4">
+		<img class="img-responsive" src="/img/icons/dataviz/2.png">
+	</div>
+	<div class="mix category-2" data-my-order="5"> bbb </div>
+	<div class="mix category-2" data-my-order="6"> cccc</div>
 </div>
-
-
-
+</div>
+<script>
+	$(function(){
+	$('#container').mixItUp();	
+});
+</script>
 
 <% include footer %>

@@ -1,0 +1,88 @@
+<% include header %>
+<link rel="stylesheet" type="text/css" href="../js/GridLoadingEffects/css/component.css" />
+
+<div class="container marketing">
+<!-- PAGE-HEADER-->
+	<div class="page-header">
+		<h2><%-title %></h2>
+			<p>Should one happen to tickle your fancy, you may click on it to explore in more detail.</p>
+			<!-- BREADCRUMB -->
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a> <span class="divider">&rarr;</span></li>
+				<li><a href="/projects">Projects</a> <span class="divider">&rarr;</span></li>
+				<li class="active">Data Viz</li>
+			</ul>
+			<!--END: BREADCRUMB -->
+	</div>
+<!-- PAGE-HEADER-->
+</div>  
+		
+	<!-- CONTENT CONTAINER-->
+		<div class="container">
+			
+				<!-- FILTER-->
+			<!-- just add your TAG to data-filter="ADD HERE" -->	
+			<!-- and then add your same TAG to portfolio item class="ADD HERE" -->
+			<div class="color-bottom-line center">
+				<div class="well text-center">
+
+						<div id="filters">
+						
+<button class="filter" data-filter="all"><a href="/projects">All</a></button>
+<button class="filter" data-filter=".category-1"><a href="/projects/design">Design</a></button>
+<button class="filter" data-filter=".category-2"><a href="/projects/traditional">Traditional</a></button>
+<button class="filter" data-filter=".category-3"><a href="/projects/dataviz">Data Viz</a></button>
+<button class="filter" data-filter=".category-3"><a href="/projects/programs">Programs</a></button>
+<button class="filter" data-filter=".category-4">UX/UI</button>
+						</div>
+					</div>
+			</div>
+							
+		<!--END: FILTER-->
+		
+<!--###################-->
+<!-- START PORTFOLIO ITEMS CONTAINER -->
+<!--###################-->
+<div class="container">
+	<ul class="grid effect-1" id="grid">
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="1"><a href="#"><img src="/img/icons/dataviz/1.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="2"><a href="#"><img src="/img/icons/dataviz/2.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="3"><a href="#"><img src="/img/icons/dataviz/4.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="4"><a href="#"><img src="/img/icons/dataviz/5.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="5"><a href="#"><img src="/img/icons/dataviz/6.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="6"><a href="#"><img src="/img/icons/dataviz/7.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="7"><a href="#"><img src="/img/icons/dataviz/8.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="8"><a href="#"><img src="/img/icons/dataviz/9.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="9"><a href="#"><img src="/img/icons/dataviz/10.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="10"><a href="#"><img src="/img/icons/dataviz/All_artists.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="11"><a href="#"><img src="/img/icons/dataviz/Cover.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="12"><a href="#"><img src="/img/icons/dataviz/horizontal_slice_abstract_paintings3.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="13"><a href="#"><img src="/img/icons/dataviz/Imageplot_all_artists_close.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="14"><a href="#"><img src="/img/icons/dataviz/Imageplot_pissarro_all_artists.jpg"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="15"><a href="#"><img src="/img/icons/dataviz/production_time.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="16"><a href="#"><img src="/img/icons/dataviz/Sculpture.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="17"><a href="#"><img src="/img/icons/dataviz/x-year_month_y-BRIGHT_median4.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="18"><a href="#"><img src="/img/icons/dataviz/xMeanByStdevB_c.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="19"><a href="#"><img src="/img/icons/dataviz/xMeanByStdevB_e.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="20"><a href="#"><img src="/img/icons/dataviz/xMeanRyMeanG.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="21"><a href="#"><img src="/img/icons/dataviz/xMeanRyMeanG_h.png"></a></li>
+	</ul>
+</div>
+<script src="/js/GridLoadingEffects/js/masonry.pkgd.min.js"></script>
+<script src="/js/GridLoadingEffects/js/imagesloaded.js"></script>
+<script src="/js/GridLoadingEffects/js/classie.js"></script>
+<script src="/js/GridLoadingEffects/js/AnimOnScroll.js"></script>
+<script>
+	$(function(){
+	$('#container').mixItUp();	
+});
+</script>
+<script>
+	new AnimOnScroll( document.getElementById( 'grid' ), {
+		minDuration : 0.4,
+		maxDuration : 0.7,
+		viewportFactor : 0.2
+	} );
+</script>
+
+<% include footer %>
