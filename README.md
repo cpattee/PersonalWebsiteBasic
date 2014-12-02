@@ -12,7 +12,7 @@ Make sure you have
 
 ```sh
 git clone https://github.com/cpattee/PersonalWebsiteBasic.git 
-cd node-js-sample
+cd PersonalWebsiteBasic
 npm install
 bower install
 grunt
