@@ -1,8 +1,75 @@
 <% include header %>
 
-<h3>CONTACT</h3>
-<h3>TEST</h3>
-<h3>TEST</h3>
-<h3>TEST</h3>
+<!-- Carousel================================================== -->
+<div class="container">
+<div id="myCarousel" class="carousel slide">
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="/img/paperbag6.jpg" alt="">
+				<div class="carousel-caption">
+					<p class="lead">YELLING AND YELLING</p>
+					<p><strong>They won't stop yelling. so many voices.they keep yelling. LOUDER AND LOUDER!</strong></p>               
+				</div>
+		</div>
+	</div>
+</div><!-- /.carousel -->
+</div>
+
+          
+    <!-- Contact form
+    ================================================== -->
+<div class="container">
+      <!-- Example row of columns -->
+      <div class="row-fluid">
+		
+			</div>
+	<hr>
+	<div class="row-fluid">
+        <div class="col-sm-4">
+          <h3 class="">
+				<i class="fa-icon-star main-color"></i>
+			</h3>
+
+       </div>
+       
+    <div class="col-sm-8">
+				
+			<h3 class="">
+				<i class="fa-icon-envelope main-color"></i>
+			</h3>
+			<h2>Send me some love</h2>
+			<h3 style="color:#FF6633;"><?php echo $_GET[msg];?></h3>
+
+        <p>Or hate. or whatever.</p>
+			<!-- CONTACT FORM -->
+				<form name="enq" method="post" action="email/" onsubmit="return validation();" class="row-fluid">
+				<label>Name</label><input class="col-sm-12" name="name" id="name" value="" type="text"><br>
+
+				<label>E-Mail</label><input class="col-sm-12" name="email" id="email" value="" type="text"><br>
+
+				<label>Subject</label><input class="col-sm-12" name="subject" value="" type="text"><br>
+
+				<label>Comments</label><textarea class="col-sm-12" name="message" id="message" rows="5" cols="25"></textarea><br>
+				<div class="actions">
+				<label>&nbsp;</label><input class="btn btn-large btn-info" name="submit" id="submitButton" value="Send Message" type="submit">
+				</div>
+				</form>
+			<!-- END CONTACT FORM -->				
+		</div>
+      </div>
+
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+<!-- gMap PLUGIN -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="/js/jquery.gmap.js"></script>
+<script type="text/javascript" src="/js/contact.js"></script>
+
+
+
+
 
 <% include footer %>

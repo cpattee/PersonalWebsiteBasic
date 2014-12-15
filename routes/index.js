@@ -12,6 +12,16 @@ router.get('/projects', function(req, res) {
   res.render('projects', { title: 'Projects' });
 });
 
+/* GET projects/graphics page. */
+router.get('/projects/design', function(req, res) {
+  res.render('design', { title: 'Projects' });
+});
+
+/* GET category page: "Design" */
+router.get('/projects/traditional', function(req, res) {
+  res.render('traditional', { title: 'Projects' });
+});
+
 /* GET about page. */
 router.get('/about', function(req, res) {
   res.render('about', { title: 'About' });
@@ -28,18 +38,8 @@ router.get('/test', function(req, res) {
 });
 
 /* GET cogs page. */
-router.get('/cogs187a', function(req, res) {
-  res.render('cogs187a', { title: 'Cogs' });
-});
-
-/* GET category page: "Design" */
-router.get('/projects/design', function(req, res) {
-  res.render('design', { title: 'Design' });
-});
-
-/* GET category page: "Design" */
-router.get('/projects/traditional', function(req, res) {
-  res.render('traditional', { title: 'Traditional' });
+router.get('/project_template', function(req, res) {
+  res.render('project_template', { title: 'Project Title' });
 });
 
 /* GET category page: "Programs" */
@@ -47,14 +47,29 @@ router.get('/projects/programs', function(req, res) {
   res.render('programs', { title: 'Programs' });
 });
 
+/* GET category page: "Installations" */
+router.get('/projects/installations', function(req, res) {
+  res.render('installations', { title: 'Installations' });
+});
+
 /* GET category page: "Data Visualization" */
 router.get('/projects/dataviz', function(req, res) {
-  res.render('dataviz', { title: 'Data Visualization' });
+  res.render('dataviz', { title: 'Projects' });
+});
+
+/* GET category page: "UXUI" */
+router.get('/projects/uxui', function(req, res) {
+  res.render('uxui', { title: 'User Experience & User Interface' });
 });
 
 /* GET project page: "condom-pope". */
-router.get('/projects/design/condom-pope', function(req, res) {
+router.get('/projects/installations/condom-pope', function(req, res) {
   res.render('condom-pope', { title: 'Condom Pope' });
+});
+
+/* GET project page: "programs2". */
+router.get('/projects/programs/programs2', function(req, res) {
+  res.render('programs2', { title: 'Programs' });
 });
 
 module.exports = router;

@@ -5,10 +5,66 @@
     overflow:hidden;  
 		list-style:none;
 }
-}
+
 .caption div {
     box-shadow: 0 0 5px #C8C8C8;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 1s;
+}
+
+.color1{
+  transition: background-color 1s ease;
+  background-color: #D7D7D7;
+}
+.color1:hover {
+  background-color: #5474B4; 
+}
+
+.color2{
+  transition: background-color 1s ease;
+  background-color: #353E46;
+}
+.color2:hover {
+  background-color: #16A085;
+}
+
+.color3{
+  transition: background-color 1s ease;
+  background-color: #EBEBEB;
+}
+.color3:hover {
+  background-color: #F6512B;
+}
+
+.color4{
+  transition: background-color 1s ease;
+  background-color: #564D5E;
+}
+.color4:hover {
+  background-color: #FFB559;
+}
+
+.color5{
+  transition: background-color 1s ease;
+  background-color: #333333;
+}
+.color5:hover {
+  background-color: #49D0B5;
+}
+
+.color6{
+  transition: background-color 1s ease;
+  background-color: #474A56;
+}
+.color6:hover {
+  background-color: #697183;
+}
+
+.color7{
+  transition: background-color 1s ease;
+  background-color: #EBEBEB;
+}
+.color7:hover {
+  background-color: #FFA636;
 }
 
 .img-circle {
@@ -32,6 +88,34 @@
     height: auto;
     max-width: 100%;
 }
+.caption
+@media all and (min-width: 420px){
+    display: none;
+    position: absolute;
+    padding-top: 15%;
+    padding-left: 12%;
+		padding-right: 5%;
+    bottom:0;
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+		font-size: small;
+    color:#fff !important;
+}
+.caption 
+@media all and (min-width: 640px){
+    display: none;
+    position: absolute;
+    padding-top: 15%;
+    padding-left: 12%;
+		padding-right: 5%;
+    bottom:0;
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+		font-size: smaller;
+    color:#fff !important;
+}
    .caption {
     display: none;
     position: absolute;
@@ -42,7 +126,7 @@
     background: rgba(0,0,0,0.6);
     width: 100%;
     height: 100%;
- 
+		font-size: medium;
     color:#fff !important;
         }
 ul.thumbnails, ul.thumbnails ul

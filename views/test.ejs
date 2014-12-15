@@ -1,34 +1,81 @@
 <% include header %>
-<div class="container-fluid">
-<button class="filter" data-filter="all">All</button>
-<button class="filter" data-filter=".category-1">Design</button>
-<button class="filter" data-filter=".category-2">Traditional</button>
-<button class="filter" data-filter=".category-3">Data Viz</button>
-<button class="filter" data-filter=".category-4">UX/UI</button>
-
+<style>
+@import url('//cdn.jsdelivr.net/font-zero-width/1.0.0/zero-width.css'); 
+</style>
 <!--button class="sort" data-sort="my-order:asc">Ascending Order</button>
 <button class="sort" data-sort="my-order:desc">Descending Order</button-->
-
-<div id="container">
-	<div class="mix category-1 col-xs-3" data-my-order="1">
-		<img class="img-responsive" src="/img/icons/dataviz/1.png">
+<link rel="stylesheet" href="/css/projects.css">
+<div class="container marketing">
+<!-- PAGE-HEADER-->
+	<div class="page-header">
+		<h2><%-title %></h2>
+			<!-- BREADCRUMB -->
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a> <span class="divider">&rarr;</span></li>
+				<li class="active">Projects</li>
+			</ul>
+			<!--END: BREADCRUMB -->
 	</div>
-	<div class="mix category-1 col-xs-3" data-my-order="2">
-		<img class="img-responsive" src="/img/icons/dataviz/1.png">
-	</div>
-	<div class="mix category-1 col-xs-3" data-my-order="3">
-		<img class="img-responsive" src="/img/icons/dataviz/1.png">
-	</div>
-	<div class="mix category-3 col-xs-3" data-my-order="4">
-		<img class="img-responsive" src="/img/icons/dataviz/2.png">
-	</div>
-	<div class="mix category-2" data-my-order="5"> bbb </div>
-	<div class="mix category-2" data-my-order="6"> cccc</div>
+<!-- PAGE-HEADER-->
+</div>  
+<div class="controls">
+  <label>Filter:</label>
+  
+  <button class="filter active" data-filter="all">All</button>
+  <button class="filter" data-filter=".category-1">Category 1</button>
+  <button class="filter" data-filter=".category-2">Category 2</button>
+  <button class="filter" data-filter=".category-3">Category 3</button>
 </div>
-</div>
-<script>
+<ul id="Container" class="container">
+  <li class="mix category-1" data-myorder="1"><img class="img" src="/img/icons/dataviz/3.png"></li>
+  <li class="mix category-1" data-myorder="2"><img class="img" src="/img/icons/dataviz/4.png"></li>
+  <li class="mix category-1" data-myorder="3"><img class="img" src="/img/icons/dataviz/5.png"></li>
+  <li class="mix category-2" data-myorder="4"><img class="img" src="/img/icons/dataviz/9.png"></li>
+  <li class="mix category-3" data-myorder="5"><img class="img" src="/img/icons/design/pixelROBOT.png"></li>
+  <li class="mix category-1" data-myorder="6"><img class="img" src="/img/project/puppets/backdrops/3.jpg"></li>
+  <li class="mix category-2" data-myorder="7"><img class="img" src="/img/icons/design/Logo_Oscillate2.gif"></li>
+  <li class="mix category-2" data-myorder="8"></li>
+  <li class="mix category-1" data-myorder="5"></li>
+  <li class="mix category-1" data-myorder="6"></li>
+  <li class="mix category-2" data-myorder="7"></li>
+  <li class="mix category-2" data-myorder="8"></li>
+  
+  <div class="gap"></div>
+  <div class="gap"></div>
+</ul>
+<!--script>
 	$(function(){
-	$('#container').mixItUp();	
+	$('#Container').mixItUp();	
+});
+</script-->
+<script>
+$(function(){
+  var $container = $('#Container'),
+      $controls = $('.controls');
+  
+  $container.mixItUp({
+    animation: {
+      duration: 700,
+      effects: 'fade translateY(600%) stagger(35ms)',
+      easing: 'cubic-bezier(0.86, 0, 0.07, 1)',
+      reverseOut: true
+    },
+    controls: {
+      enable: false
+    }
+  });
+  
+  $controls.on('click', '.filter', function(){
+    var $btn = $(this),
+        filter = $btn.attr('data-filter');
+    
+    $btn.addClass('active').siblings().removeClass('active');
+
+    $container.mixItUp('filter', 'none', function(){
+      $container.mixItUp('filter', filter);
+    });
+  });
+  
 });
 </script>
 

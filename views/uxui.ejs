@@ -1,0 +1,75 @@
+<% include header %>
+<link rel="stylesheet" type="text/css" href="../js/GridLoadingEffects/css/component.css" />
+
+<div class="container marketing">
+<!-- PAGE-HEADER-->
+	<div class="page-header">
+		<h2><%-title %></h2>
+			<!-- BREADCRUMB -->
+			<ul class="breadcrumb">
+				<li><a href="/">Home</a> <span class="divider">&rarr;</span></li>
+				<li><a href="/projects">Projects</a> <span class="divider">&rarr;</span></li>
+				<li class="active">UX/UI</li>
+			</ul>
+			<!--END: BREADCRUMB -->
+	</div>
+<!-- PAGE-HEADER-->
+</div>  
+		
+	<!-- CONTENT CONTAINER-->
+		<div class="container">
+			
+				<!-- FILTER-->
+			<!-- just add your TAG to data-filter="ADD HERE" -->	
+			<!-- and then add your same TAG to portfolio item class="ADD HERE" -->
+			<div class="color-bottom-line center">
+				<div class="well text-center">
+
+						<div id="filters">
+						
+<button class="filter" data-filter="all"><a href="/projects">All</a></button>
+<button class="filter" data-filter=".category-1"><a href="/projects/design">Design</a></button>
+<button class="filter" data-filter=".category-2"><a href="/projects/traditional">Traditional</a></button>
+<button class="filter" data-filter=".category-3"><a href="/projects/dataviz">Data Viz</a></button>
+<button class="filter" data-filter=".category-3"><a href="/projects/programs">Programs</a></button>
+<button class="filter" data-filter=".category-4"><a href="/projects/installations">Installations</a></button>
+<button class="filter" data-filter=".category-4"><a href="/projects/uxui">UX/UI</a></button>
+						</div>
+					</div>
+			</div>
+							
+		<!--END: FILTER-->
+		
+<!--###################-->
+<!-- START PORTFOLIO ITEMS CONTAINER -->
+<!--###################-->
+<div class="container">
+	<ul class="grid effect-1" id="grid">
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="1"><a href="#"><img src="/img/icons/uxui/1.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="2"><a href="#"><img src="/img/icons/uxui/2.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="3"><a href="#"><img src="/img/icons/uxui/4.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="4"><a href="#"><img src="/img/icons/uxui/5.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="5"><a href="#"><img src="/img/icons/uxui/6.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="6"><a href="#"><img src="/img/icons/uxui/7.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="7"><a href="#"><img src="/img/icons/uxui/8.png"></a></li>
+		<li class="mix category-3 col-xs-3 col-sm-3" data-my-order="8"><a href="#"><img src="/img/icons/uxui/9.png"></a></li>
+	</ul>
+</div>
+<script src="/js/GridLoadingEffects/js/masonry.pkgd.min.js"></script>
+<script src="/js/GridLoadingEffects/js/imagesloaded.js"></script>
+<script src="/js/GridLoadingEffects/js/classie.js"></script>
+<script src="/js/GridLoadingEffects/js/AnimOnScroll.js"></script>
+<script>
+	$(function(){
+	$('#container').mixItUp();	
+});
+</script>
+<script>
+	new AnimOnScroll( document.getElementById( 'grid' ), {
+		minDuration : 0.4,
+		maxDuration : 0.7,
+		viewportFactor : 0.2
+	} );
+</script>
+
+<% include footer %>
