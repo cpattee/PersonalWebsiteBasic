@@ -17,6 +17,23 @@ module.exports = function (grunt) {
         file: 'bin/www'
       }
     },
+
+    ejs:{
+			all: {
+				options: {
+					title: 'My Website',
+					url: function(url) {
+						return 'http://example.com/formatted/url/' + url;
+					},
+				},
+				src: ['app/**/*.ejs', '!app/partials/**/*'],
+				dest: 'dist/',
+				expand: true,
+				ext: '.html',
+			},
+		},
+
+
     watch: {
       options: {
         nospawn: true,
@@ -74,6 +91,10 @@ module.exports = function (grunt) {
   
   grunt.registerTask('default', [
     'develop', 
-    'watch'
+    'watch',
+    'ejs'
   ]);
+
+  grunt.loadNpmTasks('grunt-ejs');
+  
 };
